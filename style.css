@@ -14,7 +14,7 @@
 
 :root{
     --darkmainbgcolor--:#000000;
-    --darkmodebgcolor--:#0d1013ea;
+    --darkmodebgcolor--:#0d1013;
     --lightmainbgcolor--:#b8b2a6;
     --lightmodebgcolor--:#fdfdfd;
     --darktextcolor--:#fdfdfd;
@@ -31,10 +31,10 @@
 }
 
 .heading {
-    background-color: black;
+    background-color: var(--darkmodebgcolor--);
      position: sticky;
         top: 0;
-        z-index: 2;
+        z-index: 20;
         /* overflow: hidden; */
 }
 
@@ -237,32 +237,98 @@
     background-color: var(--darkmodebgcolor--);
     margin: .5rem 0;
     display: flex;
-
     align-items: center;
-    overflow-x: scroll;
+    overflow-x: auto;
     /* overflow: hidden; */
-    background-color: yellow;
+    /* background-color: yellow; */
     /* position: relative; */
     
 }
 
 
-.newfeed .story .create-story {
-    width: 7rem;
+.newfeed .story .create-story, .other-story {
+    min-width: 6rem;
     height: 10.5rem;
-    margin-left: 20px;
+    margin-left: 10px;
     border-radius: 10px;
     overflow: hidden;
-    
-    
     position: relative;
-    /* z-index: 1; */
-    background-color:rgb(42, 50, 165);
+    background-color:  rgba(51, 52, 54, 0.295);
+    /* background-color:rgba(73, 73, 73, 0.137); */
 }
 
 .newfeed .story .create-story img {
     width: 100%;
     height: 70%;
+    object-fit: cover;
+    
    
 }
+
+.newfeed .story .other-story img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.newfeed .story .create-story .add .bx {
+    background-color:#033fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid  rgb(51, 52, 54);
+    width: 35px;
+    height: 35px;
+    /* padding: 15px; */
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 50%;
+    position: absolute;
+    top: 60%;
+    left: 34%;
+
+}
+
+.newfeed .story .create-story .cap {
+    font-size: 9.3px;
+    position: absolute;
+    top: 90%;
+    right: 20%;
+
+    
+}
+
+.newfeed .story .other-story .propic {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    top: 4%;
+    left: 6%;
+    overflow: hidden;
+    border: 2.5px solid #033fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+
+}
+
+.newfeed .story .other-story .propic img {
+    /* object-fit: cover; */
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;    
+
+}
+
+.newfeed .story .other-story .accname {
+    font-size: 9.3px;
+    position: absolute;
+    top: 90%;
+    left: 10%;
+}
+
+
 
